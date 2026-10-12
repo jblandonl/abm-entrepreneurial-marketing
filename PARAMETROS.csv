@@ -1,0 +1,48 @@
+﻿parameter,value,unit,meaning,provenance
+population,500.0,personas,"Tamaño de la población potencial, sin contar al fundador.","Guía/diseño: valor propuesto, no calibrado"
+communities,5.0,comunidades,Número de grupos sociales.,"Guía/diseño: valor propuesto, no calibrado"
+initial_contacts,50.0,personas,Contactos iniciales del fundador; elección dentro del intervalo propuesto.,"Guía/diseño: valor propuesto, no calibrado"
+initial_communities,3.0,comunidades,Comunidades elegibles para seleccionar contactos iniciales.,"Guía/diseño: valor propuesto, no calibrado"
+months,60.0,meses,Horizonte de cada corrida.,"Guía/diseño: valor propuesto, no calibrado"
+founder_hours,40.0,horas/mes,Presupuesto total por estrategia.,"Guía/diseño: valor propuesto, no calibrado"
+p_within,0.06,probabilidad,Probabilidad de arista social dentro de comunidad antes de agregar el anillo.,Supuesto nuevo del prototipo: no calibrado
+p_between,0.004,probabilidad,Probabilidad de arista social entre comunidades.,Supuesto nuevo del prototipo: no calibrado
+sale_hours,1.0,horas/acción,Costo de un contacto directo.,Supuesto nuevo del prototipo: no calibrado
+maintenance_hours,0.5,horas/acción,Costo de mantener un vínculo.,Supuesto nuevo del prototipo: no calibrado
+referral_hours,1.0,horas/acción,"Costo de solicitar un referido, aunque falle.",Supuesto nuevo del prototipo: no calibrado
+exploration_hours,2.0,horas/acción,"Costo de un intento de exploración, aunque falle.",Supuesto nuevo del prototipo: no calibrado
+exploration_success,0.65,probabilidad,Probabilidad de establecer contacto en una exploración.,Supuesto nuevo del prototipo: no calibrado
+requested_success,0.75,coeficiente,Factor de probabilidad de referido solicitado; se multiplica por satisfacción y energía.,Supuesto nuevo del prototipo: no calibrado
+spontaneous_rate,0.3,coeficiente/mes,Factor de probabilidad de WOM espontáneo; se multiplica por satisfacción y energía.,Supuesto nuevo del prototipo: no calibrado
+initial_tie_min,0.6,"fuerza [0,1]",Extremo inferior uniforme para vínculos iniciales.,Supuesto nuevo del prototipo: no calibrado
+initial_tie_max,0.9,"fuerza [0,1]",Extremo superior uniforme para vínculos iniciales.,Supuesto nuevo del prototipo: no calibrado
+exploration_trust,0.25,"confianza [0,1]",Confianza inicial de exploración y base para referidos.,Supuesto nuevo del prototipo: no calibrado
+referral_trust_advantage,0.3,coeficiente,Ventaja de confianza multiplicada por fuerza del vínculo recomendador-prospecto.,Supuesto nuevo del prototipo: no calibrado
+maintenance_reinforcement,0.15,puntos/acción,Refuerzo del vínculo directo por mantenimiento.,Supuesto nuevo del prototipo: no calibrado
+contact_reinforcement,0.08,puntos/acción,Refuerzo por contacto o solicitud; también refuerza el vínculo comercial de referido.,Supuesto nuevo del prototipo: no calibrado
+tie_decay,0.025,puntos/mes,Pérdida de fuerza si no hay interacción.,Supuesto nuevo del prototipo: no calibrado
+tie_threshold,0.05,"fuerza [0,1]",Bajo este umbral se elimina el vínculo.,Supuesto nuevo del prototipo: no calibrado
+energy_decay,0.08,puntos/mes,Pérdida de energía de recomendación al final del mes.,Supuesto nuevo del prototipo: no calibrado
+maintenance_energy,0.08,puntos/acción,Recuperación de energía de promotor mantenido.,Supuesto nuevo del prototipo: no calibrado
+repeat_energy,0.25,puntos/compra,Recuperación de energía por recompra.,Supuesto nuevo del prototipo: no calibrado
+product_quality,0.85,"calidad [0,1]",Calidad del producto en la satisfacción inicial.,Supuesto nuevo del prototipo: no calibrado
+satisfaction_noise,0.1,desviación estándar,Ruido normal de satisfacción.,Supuesto nuevo del prototipo: no calibrado
+promoter_threshold,0.72,"satisfacción [0,1]",Umbral inclusivo para ser promotor activo.,Supuesto nuevo del prototipo: no calibrado
+dissatisfied_threshold,0.45,"satisfacción [0,1]",Por debajo de este valor el cliente activo influye negativamente.,Supuesto nuevo del prototipo: no calibrado
+purchase_scale,1.0,multiplicador,Escala de probabilidad de primera compra.,Supuesto nuevo del prototipo: no calibrado
+trust_base,0.25,coeficiente,Término independiente del componente de confianza/exposición.,Supuesto nuevo del prototipo: no calibrado
+trust_weight,0.6,coeficiente,Peso de confianza en la ecuación de compra.,Supuesto nuevo del prototipo: no calibrado
+social_weight,0.4,coeficiente,Peso de influencia social y adopción vecina.,Supuesto nuevo del prototipo: no calibrado
+social_influence,0.5,"[0,1]",Intensidad que multiplica influencia positiva y negativa entre vecinos.,"Guía/diseño: valor propuesto, no calibrado"
+fatigue_penalty,0.16,coeficiente/contacto,Penalización exponencial por contactos de meses anteriores; sin recuperación.,Supuesto nuevo del prototipo: no calibrado
+negative_wom_penalty,0.35,coeficiente,Penalización de compra asociada con vecinos activos insatisfechos.,Supuesto nuevo del prototipo: no calibrado
+repurchase_rate,0.1,coeficiente/mes,"Factor de recompra, multiplicado por necesidad y satisfacción.",Supuesto nuevo del prototipo: no calibrado
+active_months,9.0,meses,Ventana de actividad: meses desde última compra estrictamente menores que este valor.,Supuesto nuevo del prototipo: no calibrado
+capacity,30.0,transacciones/mes,Capacidad compartida por primeras compras y recompras.,Supuesto nuevo del prototipo: no calibrado
+congestion_penalty,0.1,coeficiente,Penalización de satisfacción por proporción de demanda no atendida.,Supuesto nuevo del prototipo: no calibrado
+autonomy_share,0.5,proporción,Mínimo estricto de adquisiciones autónomas para autonomía.,"Guía/diseño: valor propuesto, no calibrado"
+autonomy_external,0.5,proporción,Mínimo estricto de clientes externos acumulados.,"Guía/diseño: valor propuesto, no calibrado"
+autonomy_dependency,0.5,proporción,Máximo estricto de ventas dependientes del fundador.,"Guía/diseño: valor propuesto, no calibrado"
+autonomy_communities,3.0,comunidades,Mínimo inclusivo de comunidades con clientes activos.,"Guía/diseño: valor propuesto, no calibrado"
+autonomy_months,6.0,meses consecutivos,Longitud de cumplimiento simultáneo necesaria para confirmar autonomía.,"Guía/diseño: valor propuesto, no calibrado"
+founder_stop_month,0.0,mes,0 desactiva interrupción; otro valor elimina actividad comercial del fundador desde ese mes.,Supuesto nuevo del prototipo: no calibrado
